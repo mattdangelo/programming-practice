@@ -60,6 +60,7 @@ int main(int argc, char** argv) {
     result res = findValues(&values, targetSum);
     if(res.success) {
         std::cout << "Found pair: " << res.first << ", " << res.second << std::endl;
+        std::cout << "Product: " << res.first * res.second << std::endl;
     }
     else{
         std::cout << "No values in list sum to " << targetSum << std::endl;
