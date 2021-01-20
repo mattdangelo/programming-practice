@@ -24,6 +24,7 @@ std::set<int> createSet(char* filename) {
     }
     else {
         std::cerr << "Couldn't open file" << std::endl;
+        exit(1);
     }
     file.close();
     return valueSet;
