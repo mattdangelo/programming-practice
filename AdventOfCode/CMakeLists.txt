@@ -8,3 +8,4 @@ add_executable(Advent_of_code_report_repair_part_2 "1 - Report Repair/Part 2/mai
 add_executable(Advent_of_code_password_philosophy_part_1 "2 - Password Philosophy/Part 1/main.cpp"  "2 - Password Philosophy/Part 1/rule_value.cpp")
 add_executable(Advent_of_code_password_philosophy_part_2 "2 - Password Philosophy/Part 2/main.cpp"  "2 - Password Philosophy/Part 2/rule_value.cpp")
 add_executable(Advent_of_code_toboggan_trajectory_part_1 "3 - Toboggan Trajectory/Part 1/main.cpp")
+add_executable(Advent_of_code_toboggan_trajectory_part_2 "3 - Toboggan Trajectory/Part 2/main.cpp")
