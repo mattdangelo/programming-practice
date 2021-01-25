@@ -6,7 +6,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <iomanip>
 
 /**
  * Takes a filename and creates a 2D tree map
