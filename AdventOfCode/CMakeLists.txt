@@ -10,3 +10,4 @@ add_executable(Advent_of_code_password_philosophy_part_2 "2 - Password Philosoph
 add_executable(Advent_of_code_toboggan_trajectory_part_1 "3 - Toboggan Trajectory/Part 1/main.cpp")
 add_executable(Advent_of_code_toboggan_trajectory_part_2 "3 - Toboggan Trajectory/Part 2/main.cpp")
 add_executable(Advent_of_code_passport_processing_part_1 "4 - Passport Processing/Part 1/main.cpp")
+add_executable(Advent_of_code_passport_processing_part_2 "4 - Passport Processing/Part 2/main.cpp")
