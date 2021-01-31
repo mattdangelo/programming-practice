@@ -32,5 +32,5 @@
 *.app
 
 # CMake
-AdventOfCode/cmake-build-debug
-AdventOfCode/.idea
+AdventOfCode/2020/cmake-build-debug
+AdventOfCode/2020/.idea
