@@ -35,9 +35,9 @@ std::vector<rule_value> createRuleValueSet(char* filename) {
             }
             // At this point, tokens has 3 elements - a first / second value, ("2-4"), a letter followed by a colon
             // ("e:"), and the password ("asdasedrgs")
-            int first = std::atoi(tokens[0].substr(0, tokens[0].find('-')).c_str());
+            int first = std::stoi(tokens[0].substr(0, tokens[0].find('-')));
             tokens[0].erase(0, tokens[0].find('-') + 1);
-            int second = std::atoi(tokens[0].c_str());
+            int second = std::stoi(tokens[0]);
 
             // The letter is the first character of the second token (which is of the form "c:")
             char letter = tokens[1][0];

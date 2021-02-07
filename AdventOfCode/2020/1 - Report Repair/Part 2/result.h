@@ -10,7 +10,6 @@ struct result {
     int first;
     int second;
     int third;
-    result(bool, int, int, int);
 };
 
 #endif //ADVENT_OF_CODE_RESULT_H

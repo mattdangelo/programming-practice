@@ -4,9 +4,11 @@
 
 #include "rule_value.h"
 
+#include <utility>
+
 rule_value::rule_value(char letter, int first, int second, std::string password) {
     this->letter = letter;
     this->first = first;
     this->second = second;
-    this->password = password;
+    this->password = std::move(password);
 }

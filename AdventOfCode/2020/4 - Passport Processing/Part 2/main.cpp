@@ -21,7 +21,7 @@ std::map<std::string, std::function<bool(std::string)>> validations;
  * @return true if min <= value <= max, false otherwise
  */
 bool isBetween(const std::string& value, int min, int max) {
-    int converted_value = std::atoi(value.c_str());
+    int converted_value = std::stoi(value);
     return converted_value >= min && converted_value <= max;
 }
 

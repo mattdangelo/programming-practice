@@ -7,17 +7,7 @@
 #include <vector>
 #include <map>
 
-/**
- * Remove carriage returns from the end of the string, if one exists
- * @param to_sanitize The string to sanitize
- * @return The sanitized string
- */
-std::string sanitize(std::string to_sanitize) {
-    if (to_sanitize[to_sanitize.length()-1] == '\r') {
-        to_sanitize.erase(to_sanitize.length()-1);
-    }
-    return to_sanitize;
-}
+#include "../../Shared/utils.h"
 
 /**
  * Count the number of all yes answered questions in a group
@@ -65,10 +55,10 @@ int sumOfCounts(char* filename) {
                 lines.clear();
             }
             else {
-                lines.push_back(sanitize(line));
+                lines.push_back(utils::sanitize(line));
             }
         }
-        lines.push_back(sanitize(line));
+        lines.push_back(utils::sanitize(line));
         count += countGroup(lines);
     }
     else {
