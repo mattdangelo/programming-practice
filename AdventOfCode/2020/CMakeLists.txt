@@ -17,3 +17,5 @@ add_executable(Advent_of_code_passport_processing_part_2 "4 - Passport Processin
 
 add_executable(Advent_of_code_binary_boarding_part_1 "5 - Binary Boarding/Part 1/main.cpp")
 add_executable(Advent_of_code_binary_boarding_part_2 "5 - Binary Boarding/Part 2/main.cpp")
+
+add_executable(Advent_of_code_custom_customs_part_1  "6 - Custom Customs/Part 1/main.cpp")
