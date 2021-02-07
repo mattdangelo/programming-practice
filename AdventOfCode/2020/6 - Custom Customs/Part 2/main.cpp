@@ -1,11 +1,11 @@
 //
-// Created by Matt on 4/02/2021.
+// Created by Matt on 7/02/2021.
 //
 
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <set>
+#include <map>
 
 /**
  * Remove carriage returns from the end of the string, if one exists
@@ -20,22 +20,36 @@ std::string sanitize(std::string to_sanitize) {
 }
 
 /**
- * Count the number of unique yes answered questions in a group
+ * Count the number of all yes answered questions in a group
  * @param lines The group of answers
  * @return The number of unique yes answers
  */
 int countGroup(const std::vector<std::string>& lines) {
-    std::set<char> yes_answered;
+    int total = 0;
+    std::map<char, int> value_map;
     for(const std::string& line : lines) {
         for(char c : line) {
-            yes_answered.insert(c);
+            if (value_map.count(c)) {
+                value_map[c]++;
+            }
+            else {
+                value_map[c] = 1;
+            }
         }
     }
-    return yes_answered.size();
+
+    std::map<char, int>::iterator it;
+    int num_of_groups = lines.size();
+    for(it = value_map.begin(); it != value_map.end(); it++) {
+        if (it->second == num_of_groups) {
+            total++;
+        }
+    }
+    return total;
 }
 
 /**
- * Return the sum of the counts of the different groups
+ * Return the sum of the counts of the different groups for which each member answered 'yes'
  * @param filename The name of the file which contains the answers to the boarding groups
  * @return The sum of the counts
  */

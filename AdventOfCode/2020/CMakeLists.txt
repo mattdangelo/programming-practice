@@ -19,3 +19,4 @@ add_executable(Advent_of_code_binary_boarding_part_1 "5 - Binary Boarding/Part 1
 add_executable(Advent_of_code_binary_boarding_part_2 "5 - Binary Boarding/Part 2/main.cpp")
 
 add_executable(Advent_of_code_custom_customs_part_1  "6 - Custom Customs/Part 1/main.cpp")
+add_executable(Advent_of_code_custom_customs_part_2  "6 - Custom Customs/Part 2/main.cpp")
