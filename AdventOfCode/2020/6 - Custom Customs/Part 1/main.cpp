@@ -12,11 +12,11 @@
  * @param to_sanitze The string to santize
  * @return The santized string
  */
-std::string santize(std::string to_sanitze) {
-    if (to_sanitze[to_sanitze.length()-1] == '\r') {
-        to_sanitze.erase(to_sanitze.length()-1);
+std::string sanitize(std::string to_sanitize) {
+    if (to_sanitize[to_sanitize.length()-1] == '\r') {
+        to_sanitize.erase(to_sanitize.length()-1);
     }
-    return to_sanitze;
+    return to_sanitize;
 }
 
 /**
@@ -51,10 +51,10 @@ int sumOfCounts(char* filename) {
                 lines.clear();
             }
             else {
-                lines.push_back(santize(line));
+                lines.push_back(sanitize(line));
             }
         }
-        lines.push_back(santize(line));
+        lines.push_back(sanitize(line));
         count += countGroup(lines);
     }
     else {
