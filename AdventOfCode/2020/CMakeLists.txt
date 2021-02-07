@@ -20,3 +20,5 @@ add_executable(Advent_of_code_binary_boarding_part_2 "5 - Binary Boarding/Part 2
 
 add_executable(Advent_of_code_custom_customs_part_1  "6 - Custom Customs/Part 1/main.cpp" "Shared/utils.cpp")
 add_executable(Advent_of_code_custom_customs_part_2  "6 - Custom Customs/Part 2/main.cpp" "Shared/utils.cpp")
+
+add_executable(Advent_of_code_handy_haversacks_part_1  "7 - Handy Haversacks/Part 1/main.cpp" "Shared/utils.cpp")

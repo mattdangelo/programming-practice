@@ -146,7 +146,7 @@ int numberOfValidPassports(char* filename) {
 }
 
 /**
- * Return the total number of valid passports
+ * Print the total number of valid passports
  */
 int main(int argc, char** argv) {
     if (argc != 2) {

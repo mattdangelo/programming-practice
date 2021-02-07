@@ -56,7 +56,7 @@ long countEncounteredTrees(std::vector<std::vector<bool>>& map, int right, int d
 }
 
 /**
- * Return the product of the trees encountered using the strategies outlined in the problem description
+ * Print the product of the trees encountered using the strategies outlined in the problem description
  */
 int main(int argc, char** argv) {
     if (argc != 2) {

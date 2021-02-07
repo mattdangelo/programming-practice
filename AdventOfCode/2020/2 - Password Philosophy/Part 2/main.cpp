@@ -55,7 +55,7 @@ std::vector<rule_value> createRuleValueSet(char* filename) {
 }
 
 /**
- * Return the total number of valid passwords given an input file
+ * Print the total number of valid passwords given an input file
  */
 int main(int argc, char** argv) {
     if (argc != 2) {

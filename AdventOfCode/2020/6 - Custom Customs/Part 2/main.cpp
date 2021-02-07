@@ -70,7 +70,7 @@ int sumOfCounts(char* filename) {
 }
 
 /**
- * Return the sum of the counts of 'yes' responses
+ * Print the sum of the counts of 'yes' responses
  */
 int main(int argc, char** argv) {
     if (argc != 2) {

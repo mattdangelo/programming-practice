@@ -3,6 +3,7 @@
 //
 
 #include <string>
+#include <algorithm>
 
 #include "utils.h"
 
@@ -16,4 +17,22 @@ std::string utils::sanitize(std::string s) {
         s.erase(s.length()-1);
     }
     return s;
+}
+
+std::string utils::stripFormatting(std::string s) {
+    char to_remove[] = {'.', ','};
+    for(char c : to_remove) {
+        s.erase(std::remove(s.begin(), s.end(), c), s.end());
+    }
+    return s;
+}
+
+std::string utils::removeFromString(std::string str, const std::vector<std::string>& values) {
+    for(const std::string& s : values) {
+        std::string::size_type i = str.find(s);
+        if (i != std::string::npos) {
+            str.erase(i, str.length());
+        }
+    }
+    return str;
 }

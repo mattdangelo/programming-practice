@@ -34,7 +34,7 @@ std::vector<std::vector<bool>> createMap(char* filename) {
 }
 
 /**
- * Return the total number of encountered trees
+ * Print the total number of encountered trees
  */
 int main(int argc, char** argv) {
     if (argc != 2) {

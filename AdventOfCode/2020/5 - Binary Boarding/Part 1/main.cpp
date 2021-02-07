@@ -70,7 +70,7 @@ int highestSeatID(char* filename) {
 }
 
 /**
- * Return the highest seat ID
+ * Print the highest seat ID
  */
 int main(int argc, char** argv) {
     if (argc != 2) {
