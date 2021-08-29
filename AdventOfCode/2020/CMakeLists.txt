@@ -27,3 +27,4 @@ add_executable(Advent_of_code_handheld_halting_part_1  "8 - Handheld Halting/Par
 add_executable(Advent_of_code_handheld_halting_part_2  "8 - Handheld Halting/Part 2/main.cpp")
 
 add_executable(Advent_of_code_encoding_error_part_1  "9 - Encoding Error/Part 1/main.cpp")
+add_executable(Advent_of_code_encoding_error_part_2  "9 - Encoding Error/Part 2/main.cpp")
