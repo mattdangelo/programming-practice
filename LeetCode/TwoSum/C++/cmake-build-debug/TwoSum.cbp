@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug"/>
+				<Option working_dir="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug"/>
+				<Option working_dir="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug"/>
+				<Option working_dir="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TwoSum">
-				<Option output="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/TwoSum" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug"/>
+				<Option output="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/TwoSum" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 TwoSum"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 TwoSum"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TwoSum/fast">
-				<Option output="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/TwoSum" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug"/>
+				<Option output="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/TwoSum" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,17 +75,17 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 TwoSum/fast"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 TwoSum/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/main.cpp">
+		<Unit filename="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/main.cpp">
 			<Option target="TwoSum"/>
 		</Unit>
-		<Unit filename="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/CMakeLists.txt">
+		<Unit filename="/mnt/e/Drive/Projects/ProgrammingPractice/LeetCode/TwoSum/C++/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
