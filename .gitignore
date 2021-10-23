@@ -34,3 +34,6 @@
 # CMake
 AdventOfCode/2020/cmake-build-debug
 AdventOfCode/2020/.idea
+
+LeetCode/cmake-build-debug
+LeetCode/.idea
