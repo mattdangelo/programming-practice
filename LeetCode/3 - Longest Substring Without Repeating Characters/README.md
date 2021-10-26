@@ -4,4 +4,4 @@
 
 ### Notes:
 
-* Iterate over the string keeping track of the longest substring until a repeat character. Maybe use a set.
+* Sliding window approach with a set to determine if we've seen a character before
