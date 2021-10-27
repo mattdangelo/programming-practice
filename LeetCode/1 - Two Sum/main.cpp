@@ -1,14 +1,33 @@
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 
 std::vector<int> twoSum(std::vector<int>& nums, int target) {
+    std::unordered_map<int, std::vector<int>> val_to_indexes;
+
     for(int i=0;i<nums.size();i++) {
-        for(int j=i+1;j<nums.size();j++) {
-            if(nums.at(j) == target - nums.at(i)) {
-                std::vector<int> indices;
-                indices.push_back(i);
-                indices.push_back(j);
-                return indices;
+        if(val_to_indexes.count(nums[i])) {
+            val_to_indexes[nums[i]].push_back(i);
+        }
+        else {
+            val_to_indexes[nums[i]] = { i };
+        }
+    }
+
+    for(int i=0;i<nums.size();i++) {
+        int to_find = target - nums[i];
+
+        if(val_to_indexes.count(to_find)) {
+            std::vector<int> index_info = val_to_indexes[to_find];
+
+            if(to_find == nums[i]) {
+                if(index_info.size() > 1) {
+                    // Make sure we don't return the same index for both indexes
+                    return { index_info[0], index_info[1] };
+                }
+            }
+            else {
+                return { i , index_info[0] };
             }
         }
     }
