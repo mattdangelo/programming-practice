@@ -1,5 +1,8 @@
 # Programming Practice
 
+
+### All solutions written in C++
+
 Advent of Code
 https://adventofcode.com/
 
