@@ -4,4 +4,4 @@
 
 ### Notes:
 
-* Go through each string  char by char until you hit a char that doesn't match
+* Go through each string char by char until you hit a char that doesn't match
