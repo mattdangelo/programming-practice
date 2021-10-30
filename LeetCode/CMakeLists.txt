@@ -8,6 +8,7 @@ add_executable(Product_of_Array_Except_Self "238 - Product of Array Except Self/
 add_executable(Invert_Binary_Tree "226 - Invert Binary Tree/main.cpp")
 add_executable(Count_Complete_Tree_Nodes "222 - Count Complete Tree Nodes/main.cpp")
 add_executable(Contains_Duplicate "217 - Contains Duplicate/main.cpp")
+add_executable(Number_of_1_bits "191 - Number of 1 Bits/main.cpp")
 add_executable(Min_Stack "155 - Min Stack/main.cpp" "155 - Min Stack/minstack.cpp")
 add_executable(Best_Time_to_Buy_and_Sell_Stock "121 - Best Time to Buy and Sell Stock/main.cpp")
 add_executable(Sort_Colors "75 - Sort Colors/main.cpp")
