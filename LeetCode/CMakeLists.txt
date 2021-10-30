@@ -4,6 +4,7 @@ project(LeetCode)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Guess_Number_Higher_or_Lower "374 - Guess Number Higher or Lower/main.cpp")
+add_executable(Counting_Bits "338 - Counting Bits/main.cpp")
 add_executable(Product_of_Array_Except_Self "238 - Product of Array Except Self/main.cpp")
 add_executable(Invert_Binary_Tree "226 - Invert Binary Tree/main.cpp")
 add_executable(Count_Complete_Tree_Nodes "222 - Count Complete Tree Nodes/main.cpp")
