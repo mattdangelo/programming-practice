@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 project(LeetCode)
 
 set(CMAKE_CXX_STANDARD 14)
-
+add_executable(Rotting_Oranges "994 - Rotting Oranges/main.cpp")
 add_executable(Guess_Number_Higher_or_Lower "374 - Guess Number Higher or Lower/main.cpp")
 add_executable(Counting_Bits "338 - Counting Bits/main.cpp")
 add_executable(Product_of_Array_Except_Self "238 - Product of Array Except Self/main.cpp")
