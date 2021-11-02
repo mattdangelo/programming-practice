@@ -14,6 +14,7 @@ add_executable(Min_Stack "155 - Min Stack/main.cpp" "155 - Min Stack/minstack.cp
 add_executable(Best_Time_to_Buy_and_Sell_Stock "121 - Best Time to Buy and Sell Stock/main.cpp")
 add_executable(Merge_Sorted_Array "88 - Merge Sorted Array/main.cpp")
 add_executable(Sort_Colors "75 - Sort Colors/main.cpp")
+add_executable(Climbing_Stairs "70 - Climbing Stairs/main.cpp")
 add_executable(Maximum_Subarray "53 - Maximum Subarray/main.cpp")
 add_executable(Merge_Two_Sorted_Lists "21 - Merge Two Sorted Lists/main.cpp")
 add_executable(Valid_Parentheses "20 - Valid Parentheses/main.cpp")
