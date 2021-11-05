@@ -3,6 +3,7 @@ project(LeetCode)
 
 set(CMAKE_CXX_STANDARD 14)
 add_executable(Rotting_Oranges "994 - Rotting Oranges/main.cpp")
+add_executable(Arranging_Coins "441 - Arranging Coins/main.cpp")
 add_executable(Sum_of_Left_Leaves "404 - Sum of Left Leaves/main.cpp")
 add_executable(Guess_Number_Higher_or_Lower "374 - Guess Number Higher or Lower/main.cpp")
 add_executable(Counting_Bits "338 - Counting Bits/main.cpp")
