@@ -39,5 +39,9 @@ std::vector<std::string> letterCombinations(std::string digits) {
 int main() {
     auto output = letterCombinations("23");
 
+    for(std::string s : output) {
+        std::cout << s << std::endl;
+    }
+
     return 0;
 }
