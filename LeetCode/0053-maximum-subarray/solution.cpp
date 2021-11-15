@@ -1,21 +1,27 @@
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-        int max_sum = INT32_MIN;
-        int local_sum = INT32_MIN;
-
+        int current_max = INT32_MIN;
+        int best_max = INT32_MIN;
+        
         for(int i : nums) {
-            if(local_sum < 0) {
-                local_sum = 0;
+            if(current_max == INT32_MIN) {
+                current_max = i;
             }
-
-            local_sum += i;
-
-            if(local_sum > max_sum) {
-                max_sum = local_sum;
+            else {
+                current_max += i;
             }
+            
+            if(current_max > best_max) {
+                best_max = current_max;
+            }
+            
+            if(current_max < 0) {
+                current_max = 0;
+            }
+            
         }
-
-        return max_sum;
+        
+        return best_max;
     }
 };
