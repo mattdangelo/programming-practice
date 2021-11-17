@@ -1,20 +1,20 @@
 class Solution {
     std::unordered_map<int, int> memo;
 public:
-    int rob(vector<int> nums, int i) {
-        if(i < 0) {
+    int rob(vector<int>& nums, int index) {
+        if(index < 0) {
             return 0;
         }
         
-        if(memo.find(i - 2) == memo.end()) {
-            memo[i - 2] = rob(nums, i - 2);
+        if(memo.find(index-1) == memo.end()) {
+            memo[index-1] = rob(nums, index - 1);
+        }
+                                
+        if(memo.find(index-2) == memo.end()) {
+            memo[index-2] = rob(nums, index - 2);
         }
         
-        if(memo.find(i - 1) == memo.end()) {
-            memo[i - 1] = rob(nums, i -1);
-        }
-
-        return max(memo[i - 2] + nums[i], memo[i - 1]);
+        return max(memo[index-1], memo[index-2] + nums[index]);
     }
     
     int rob(vector<int>& nums) {
