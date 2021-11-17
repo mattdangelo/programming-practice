@@ -1,35 +1,31 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        if(s.length() < 2) {
-            return s.length();
-        }
-
-        int max = 0;
-
-        std::set<char> found;
-        int l_ptr = 0;
-        int r_ptr = 1;
-        found.insert(s[0]);
-
-        for(int i=1;i<s.length();i++) {
-            max = std::max(r_ptr - l_ptr, max);
-            if(found.find(s[i]) == found.end()) {
-                // Haven't seen this char before
-                r_ptr++;
-                found.insert(s[i]);
+        std::unordered_set<char> found;
+        int best = 0;
+        
+        int l = 0;
+        int r = 0;
+        
+        while(r < s.length()) {
+            if(found.count(s[r])) {
+                // Have seen this value
+                while(s[l] != s[r]) {
+                    found.erase(s[l]);
+                    l++;
+                }
+                found.erase(s[l]);
+                l++;
             }
             else {
-                while(s[l_ptr] != s[i]) {
-                    found.erase(s[l_ptr]);
-                    l_ptr++;
+                found.insert(s[r]);
+                r++;
+                if((r - l + 1) > best) {
+                    best = (r - l);
                 }
-                l_ptr++;
-                r_ptr++;
             }
         }
-
-        // Check after loop
-        return std::max(r_ptr - l_ptr, max);
+        
+        return best;
     }
 };
