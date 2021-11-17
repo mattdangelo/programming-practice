@@ -1,21 +1,23 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& numbers, int target) {
-    int left = 0;
-    int right = numbers.size() - 1;
-    while (left < right) {
-        int diff = numbers.at(right) + numbers.at(left);
-        if (diff < target) {
-            left++;
+        int l = 0;
+        int r = numbers.size() - 1;
+        
+        while(l < r) {
+            int sum = numbers[l] + numbers[r];
+            if(sum == target) {
+                std::vector<int> res = {l + 1, r + 1};
+                return res;
+            }
+            else if(sum < target) {
+                l++;
+            }
+            else {
+                r--;
+            }
         }
-        else if (diff > target) {
-            right--;
-        }
-        else {
-            return std::vector<int> {left + 1, right + 1};
-        }
-    }
-
-    return std::vector<int>();
+        
+        return std::vector<int>();
     }
 };
