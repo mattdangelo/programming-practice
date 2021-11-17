@@ -1,28 +1,27 @@
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        if(prices.size() < 2) {
-            return 0;
+        std::vector<int> low(prices.size()+1);
+        std::vector<int> high(prices.size()+1);
+        low[0] = 1000000;
+        high[prices.size()] = -1;
+        
+        for(int i=1;i<prices.size() + 1;i++) {
+            low[i] = min(low[i-1], prices[i-1]);
         }
-
-        std::vector<int> mins;
-        std::vector<int> maxes;
-
-        mins.push_back(prices[0]);
-        maxes.push_back(prices[prices.size() - 1]);
-        for(int i=1;i<prices.size();i++) {
-            mins.push_back(prices[i] < mins[i-1] ? prices[i] : mins[i-1]);
-            maxes.push_back(prices[prices.size() - i - 1] < maxes[i-1] ? maxes[i-1] : prices[prices.size() - i - 1]);
+        
+        for(int i=prices.size();i>0;i--) {
+            high[i - 1] = max(high[i], prices[i - 1]);
         }
-
-        int max = 0;
-        for(int i=1;i<prices.size();i++) {
-            int val = maxes[prices.size() - 1 - i] - mins[i - 1];
-            if(val > max) {
-                max = val;
+        
+        int best = 0;
+        for(int i=0;i<low.size();i++) {
+            int sum = high[i] - low[i];
+            if(sum > best) {
+                best = sum;
             }
         }
-
-        return max;
+        
+        return best;
     }
 };
