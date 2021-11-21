@@ -11,44 +11,36 @@
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        if(l1 == nullptr) {
-            return l2;
-        }
-        else if(l2 == nullptr) {
-            return l1;
-        }
+        ListNode* start = nullptr;
+        ListNode* end = nullptr;
 
-        // At this point, l1 and l2 are populated
-        ListNode* new_list = new ListNode(INT_MAX);
-        ListNode* tail = new_list;
-        
-        auto l1_ptr = l1;
-        auto l2_ptr = l2;
-        
-        while(l1_ptr != nullptr || l2_ptr != nullptr) {
-            int val_to_use;
-            if(l1_ptr == nullptr) {
-                val_to_use = l2_ptr->val;
-                l2_ptr = l2_ptr->next;
-            }
-            else if(l2_ptr == nullptr) {
-                val_to_use = l1_ptr->val;
-                l1_ptr = l1_ptr->next;
-            }
-            else {
-                if(l1_ptr->val < l2_ptr->val) {
-                    val_to_use = l1_ptr->val;
-                    l1_ptr = l1_ptr->next;
+        while(l1 != nullptr || l2 != nullptr) {
+            if(l1 == nullptr || ((l2 != nullptr) && l2->val < l1->val)) {
+                auto* temp = new ListNode(l2->val);
+                if(end == nullptr) {
+                    start = temp;
+                    end = start;
                 }
                 else {
-                    val_to_use = l2_ptr->val;
-                    l2_ptr = l2_ptr->next;
+                    end->next = temp;
+                    end = temp;
                 }
+                l2 = l2->next;
             }
-            tail->next = new ListNode(val_to_use);
-            tail = tail->next;
+            else {
+                auto* temp = new ListNode(l1->val);
+                if(end == nullptr) {
+                    start = temp;
+                    end = start;
+                }
+                else {
+                    end->next = temp;
+                    end = temp;
+                }
+                l1 = l1->next;
+            }
         }
 
-        return new_list->next;
+        return start;
     }
 };
