@@ -14,17 +14,17 @@ public:
         if(head == nullptr) {
             return nullptr;
         }
-
-        ListNode* current = head;
+        
         ListNode* prev = nullptr;
-
-        while(current != nullptr) {
-            ListNode* next = current->next;
-            current->next = prev;
-            prev = current;
-            current = next;
+        
+        ListNode* ptr = head;
+        while(ptr != nullptr) {
+            ListNode* temp = ptr->next;
+            ptr->next = prev;
+            prev = ptr;
+            ptr = temp;
         }
-
+        
         return prev;
     }
 };
