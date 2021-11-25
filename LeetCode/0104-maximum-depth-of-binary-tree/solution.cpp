@@ -10,25 +10,17 @@
  * };
  */
 class Solution {
-    int current = 0;
-
-    void DFS(TreeNode* root, int level) {
-        current = current > level ? current : level;
-        if(root->left != nullptr) {
-            DFS(root->left, level + 1);
-        }
-
-        if(root->right != nullptr) {
-            DFS(root->right, level + 1);
-        }
-    }
 public:
-    int maxDepth(TreeNode* root) {
-        if(root == nullptr) {
-            return 0;
+    int DFS(TreeNode* n, int level) {
+        if(n == nullptr) {
+            return level;
         }
 
-        DFS(root, 1);
-        return current;
+        return max( DFS(n->left, level + 1), DFS(n->right, level + 1));
     }
+    
+    int maxDepth(TreeNode* root) {
+        return DFS(root, 0);
+    }
+
 };
