@@ -2,7 +2,7 @@
 
 
 ### All solutions written in C++
-# Build project with CMake
+#### Build project with CMake
 
 Advent of Code
 https://adventofcode.com/
