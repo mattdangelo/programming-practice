@@ -7,6 +7,7 @@ add_executable(Min_Cost_Climbing_Stairs "746 - Min Cost Climbing Stairs/main.cpp
 add_executable(Daily_Temperatures "739 - Daily Temperatures/main.cpp")
 add_executable(Arranging_Coins "441 - Arranging Coins/main.cpp")
 add_executable(Sum_of_Left_Leaves "404 - Sum of Left Leaves/main.cpp")
+add_executable(Insert_Delete_GetRandom_O1 "380 - Insert Delete GetRandom O(1)/main.cpp")
 add_executable(Guess_Number_Higher_or_Lower "374 - Guess Number Higher or Lower/main.cpp")
 add_executable(Counting_Bits "338 - Counting Bits/main.cpp")
 add_executable(Missing_Number "268 - Missing Number/main.cpp")
