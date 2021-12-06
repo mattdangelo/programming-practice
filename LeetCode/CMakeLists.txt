@@ -24,6 +24,7 @@ add_executable(Remove_Linked_List_Elements "203 - Remove Linked List Elements/ma
 add_executable(Reverse_Bits "190 - Reverse Bits/main.cpp")
 add_executable(Number_of_1_bits "191 - Number of 1 Bits/main.cpp")
 add_executable(Min_Stack "155 - Min Stack/main.cpp" "155 - Min Stack/minstack.cpp")
+add_executable(First_Bad_Version "278 - First Bad Version/main.cpp")
 add_executable(Single_Number_3 "260 - Single Number III/main.cpp")
 add_executable(Linked_List_Cycle "141 - Linked List Cycle/main.cpp")
 add_executable(Single_Number "136 - Single Number/main.cpp")
