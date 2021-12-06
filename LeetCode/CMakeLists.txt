@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 project(LeetCode)
 
 set(CMAKE_CXX_STANDARD 14)
+add_executable(Nth_Tribonacci_Number "1137 - N-th Tribonacci Number/main.cpp")
 add_executable(Rotting_Oranges "994 - Rotting Oranges/main.cpp")
 add_executable(Min_Cost_Climbing_Stairs "746 - Min Cost Climbing Stairs/main.cpp")
 add_executable(Daily_Temperatures "739 - Daily Temperatures/main.cpp")
