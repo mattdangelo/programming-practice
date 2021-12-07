@@ -1,26 +1,25 @@
 class Solution {
-private:
-    int count = 0;
-    std::unordered_map<std::string, int> memo;
+    std::unordered_map<uint64_t, int> memo;
 public:
-    int recFindTargetSumWays(vector<int> nums, int target, int index) {
-        if(index == nums.size()) {
-            if(target == 0) {
-                return 1;
-            }
-            return 0;
+    int recFindTargetSumWays(vector<int>& nums, int target, int index) {
+        if(index >= nums.size()) {
+            return target == 0;
         }
         
-        std::string key_a = std::to_string(target + nums[index]) + "_" + std::to_string(index + 1);
-        if(memo.find(key_a) == memo.end()) {
+        uint64_t key_a = target + nums[index];
+        key_a = key_a << 32;
+        key_a = key_a | index + 1;
+        if(memo.count(key_a) == 0) {
             memo[key_a] = recFindTargetSumWays(nums, target + nums[index], index + 1);
         }
         
-        std::string key_b = std::to_string(target - nums[index]) + "_" + std::to_string(index + 1);
-        if(memo.find(key_b) == memo.end()) {
+        uint64_t key_b = target - nums[index];
+        key_b = key_b << 32;
+        key_b = key_b | index + 1;
+        if(memo.count(key_b) == 0) {
             memo[key_b] = recFindTargetSumWays(nums, target - nums[index], index + 1);
         }
-
+        
         return memo[key_a] + memo[key_b];
     }
     
