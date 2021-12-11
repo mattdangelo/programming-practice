@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "../../shared/treenode.h"
+#include "../shared/treenode.h"
 
 int countNodes(TreeNode* root) {
     if(root == nullptr) {

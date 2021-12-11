@@ -22,6 +22,7 @@ int searchInsert(std::vector<int>& nums, int target) {
 }
 
 int main() {
-	std::cout << searchInsert({ 1, 3, 5, 6 }, 5);
+	std::vector<int> input = { 1, 3, 5, 6 };
+	std::cout << searchInsert(input, 5);
 	return 0;
 }

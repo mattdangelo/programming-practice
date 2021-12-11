@@ -22,6 +22,7 @@ int search(std::vector<int>& nums, int target) {
 }
 
 int main() {
-    std::cout << search( {-1, 0, 3, 5, 9, 12}, 9) << std::endl;
+    std::vector<int> input = { -1, 0, 3, 5, 9, 12 };
+    std::cout << search(input, 9) << std::endl;
     return 0;
 }

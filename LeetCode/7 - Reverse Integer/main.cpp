@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <string>
 
 int reverse(int x) {
     bool negative = x < 0;
