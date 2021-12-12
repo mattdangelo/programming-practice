@@ -10,23 +10,37 @@
  */
 class Solution {
 public:
-    ListNode* recSwapPairs(ListNode* current, ListNode* pointed_by) {
-        if(current == nullptr || current->next == nullptr) {
-            return current;
-        }
-        
-        ListNode* next = current->next;
-        current->next = next->next;
-        next->next = current;
-        if(pointed_by != nullptr) {
-            pointed_by->next = next;
-        }
-        
-        recSwapPairs(current->next, current);
-        return next;
-    }
-    
     ListNode* swapPairs(ListNode* head) {
-        return recSwapPairs(head, nullptr);
+        if (head == nullptr) {
+            return head;
+        }
+        else if (head->next == nullptr) {
+            return head;
+        }
+        
+        ListNode* prev = nullptr;
+        ListNode* curr = head;
+        ListNode* next = curr->next;
+        ListNode* ret = next;
+
+        while (curr != nullptr && next != nullptr) {
+            // Swap
+            curr->next = next->next;
+            next->next = curr;
+
+            if (prev) {
+                prev->next = next;
+            }
+
+            // Update
+            prev = curr;
+            curr = curr->next;
+            if (curr == nullptr) {
+                break;
+            }
+            next = curr->next;
+        }
+
+        return ret;
     }
 };
