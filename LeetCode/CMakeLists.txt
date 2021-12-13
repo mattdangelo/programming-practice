@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 project(LeetCode)
 
 set(CMAKE_CXX_STANDARD 14)
+add_executable(Consecutive_Characters "1446 - Consecutive Characters/main.cpp")
 add_executable(Convert_Binary_Number_in_a_Linked_List_to_Integer "1290 - Convert Binary Number in a Linked List to Integer/main.cpp")
 add_executable(Nth_Tribonacci_Number "1137 - N-th Tribonacci Number/main.cpp")
 add_executable(Rotting_Oranges "994 - Rotting Oranges/main.cpp")
