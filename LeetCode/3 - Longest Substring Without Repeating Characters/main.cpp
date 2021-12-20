@@ -37,9 +37,5 @@ int lengthOfLongestSubstring(std::string s) {
 
 int main() {
     std::cout << (lengthOfLongestSubstring("abcabcbb") == 3) << std::endl;
-    std::cout << (lengthOfLongestSubstring("bbbbb") == 1) << std::endl;
-    std::cout << (lengthOfLongestSubstring("pwwkew") == 3) << std::endl;
-    std::cout << (lengthOfLongestSubstring("") == 0) << std::endl;
-    std::cout << (lengthOfLongestSubstring("dvdf") == 3) << std::endl;
     return 0;
 }
