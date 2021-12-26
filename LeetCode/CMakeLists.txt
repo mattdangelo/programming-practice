@@ -8,6 +8,7 @@ add_executable(Minimum_Absolute_Difference "1200 - Minimum Absolute Difference/m
 add_executable(Nth_Tribonacci_Number "1137 - N-th Tribonacci Number/main.cpp")
 add_executable(Rotting_Oranges "994 - Rotting Oranges/main.cpp")
 add_executable(Squares_of_a_Sorted_Array "977 - Squares of a Sorted Array/main.cpp")
+add_executable(K_Closest_Points_to_Origin "973 - K Closest Points to Origin/main.cpp")
 add_executable(Min_Cost_Climbing_Stairs "746 - Min Cost Climbing Stairs/main.cpp")
 add_executable(Daily_Temperatures "739 - Daily Temperatures/main.cpp")
 add_executable(Binary_Search "704 - Binary Search/main.cpp")
