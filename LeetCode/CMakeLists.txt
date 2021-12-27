@@ -61,6 +61,7 @@ add_executable(Letter_Combinations_of_a_Phone_Number "17 - Letter Combinations o
 add_executable(3Sum "15 - 3Sum/main.cpp")
 add_executable(Longest_Common_Prefix "14 - Longest Common Prefix/main.cpp")
 add_executable(Reverse_Integer "7 - Reverse Integer/main.cpp")
+add_executable(Zigzag_Conversion "6 - Zigzag Conversion/main.cpp")
 add_executable(Longest_Palindromic_Substring "5 - Longest Palindromic Substring/main.cpp")
 add_executable(Longest_Substring_Without_Repeating_Characters "3 - Longest Substring Without Repeating Characters/main.cpp")
 add_executable(Add_Two_Numbers "2 - Add Two Numbers/main.cpp")
