@@ -16,10 +16,13 @@ public:
         
         while(fast != nullptr) {
             fast = fast->next;
-            if(fast != nullptr) {
-                fast = fast->next;
-                slow = slow->next;
+            if(fast == nullptr) {
+                break;
             }
+            else {
+                fast = fast->next;
+            }
+            slow = slow->next;
         }
         
         return slow;
