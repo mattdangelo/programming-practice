@@ -51,6 +51,7 @@ add_executable(Unique_Binary_Search_Trees "96 - Unique Binary Search Trees/main.
 add_executable(Merge_Sorted_Array "88 - Merge Sorted Array/main.cpp")
 add_executable(Sort_Colors "75 - Sort Colors/main.cpp")
 add_executable(Climbing_Stairs "70 - Climbing Stairs/main.cpp")
+add_executable(Unique_Paths "62 - Unique Paths/main.cpp")
 add_executable(Length_of_Last_Word "58 - Length of Last Word/main.cpp")
 add_executable(Maximum_Subarray "53 - Maximum Subarray/main.cpp")
 add_executable(Valid_Sudoku "36 - Valid Sudoku/main.cpp")
