@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "../shared/utils.h"
 #include "../shared/listnode.h"
 
 ListNode* reverseList(ListNode* head) {
@@ -24,12 +25,9 @@ int main() {
     auto* head = new ListNode(1);
     head->next = new ListNode(2);
 
-    ListNode* result = reverseList(head);
+    ListNode* res = reverseList(head);
 
-    while(result != nullptr) {
-        std::cout << result->val << " " << std::endl;
-        result = result->next;
-    }
+    utils::print_linked_list(res);
 
     return 0;
 }

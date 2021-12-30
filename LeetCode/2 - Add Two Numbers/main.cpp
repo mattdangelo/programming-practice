@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+
+#include "../shared/utils.h"
 #include "../shared/listnode.h"
 
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
@@ -64,8 +66,5 @@ int main() {
 
     ListNode* res = addTwoNumbers(l1, l2);
 
-    while(res != nullptr) {
-        std::cout << res->val << std::endl;
-        res = res->next;
-    }
+    utils::print_linked_list(res);
 }

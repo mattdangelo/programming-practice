@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "../shared/utils.h"
 #include "../shared/listnode.h"
 
 ListNode* swapPairs(ListNode* head) {
@@ -42,12 +43,9 @@ int main() {
 	head->next->next = new ListNode(3);
 	head->next->next->next = new ListNode(4);
 
-	auto result = swapPairs(head);
+	auto res = swapPairs(head);
 
-	while (result != nullptr) {
-		std::cout << result->val << " ";
-		result = result->next;
-	}
+	utils::print_linked_list(res);
 
 	return 0;
 }

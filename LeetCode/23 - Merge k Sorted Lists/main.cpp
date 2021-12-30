@@ -2,6 +2,7 @@
 #include <vector>
 #include <queue>
 
+#include "../shared/utils.h"
 #include "../shared/listnode.h"
 
 struct comp {
@@ -47,12 +48,9 @@ int main() {
     l3->next = new ListNode(6);
 
     std::vector<ListNode*> input = { l1, l2, l3 };
-    ListNode* result = mergeKLists(input);
+    ListNode* res = mergeKLists(input);
 
-    while(result != nullptr) {
-        std::cout << result->val << std::endl;
-        result = result->next;
-    }
+    utils::print_linked_list(res);
 
     return 0;
 }
