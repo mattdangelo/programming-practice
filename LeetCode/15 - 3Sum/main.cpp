@@ -41,9 +41,9 @@ std::vector<std::vector<int>> threeSum(std::vector<int>& nums) {
 
 int main() {
     std::vector<int> input = {-1,0,1,2,-1,-4};
-    std::vector<std::vector<int>> result = threeSum(input);
+    std::vector<std::vector<int>> res = threeSum(input);
 
-    for(const std::vector<int>& answer : result) {
+    for(const std::vector<int>& answer : res) {
         for(int i : answer) {
             std::cout << i << " " << std::endl;
         }

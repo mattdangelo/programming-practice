@@ -18,7 +18,11 @@ std::vector<int> dailyTemperatures(std::vector<int>& temperatures) {
 
 int main() {
     std::vector<int> input = { 73, 74, 75, 71, 69, 72, 76, 73 };
-    auto result = dailyTemperatures(input);
+    auto res = dailyTemperatures(input);
+
+    for (int i : res) {
+        std::cout << i << " ";
+    }
 
     return 0;
 }

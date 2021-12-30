@@ -1,6 +1,7 @@
 #include <iostream>
 #include <queue>
 
+#include "../shared/utils.h"
 #include "../shared/treenode.h"
 
 TreeNode* invertTree(TreeNode* root) {
@@ -43,23 +44,9 @@ int main() {
     r->right->right = new TreeNode(9);
     r->right->left = new TreeNode(6);
 
-    TreeNode* result = invertTree(r);
+    TreeNode* res = invertTree(r);
 
-    std::queue<TreeNode*> to_visit;
-    to_visit.push(result);
-
-    while(!to_visit.empty()) {
-        TreeNode* current = to_visit.front();
-        to_visit.pop();
-        std::cout << current->val << std::endl;
-        if(current->left != nullptr) {
-            to_visit.push(current->left);
-        }
-
-        if(current->right != nullptr) {
-            to_visit.push(current->right);
-        }
-    }
+    utils::print_binary_tree_vals_BFS(res);
 
     return 0;
 }

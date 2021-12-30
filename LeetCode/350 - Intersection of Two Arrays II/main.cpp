@@ -32,9 +32,9 @@ int main() {
 	std::vector<int> n1 = { 1, 2, 2, 1 };
 	std::vector<int> n2 = { 2, 2 };
 
-	auto result = intersect(n1, n2);
+	auto res = intersect(n1, n2);
 
-	for (int i : result) {
+	for (int i : res) {
 		std::cout << i << " ";
 	}
 }

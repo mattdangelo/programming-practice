@@ -15,9 +15,9 @@ std::vector<int> countBits(int n) {
 }
 
 int main() {
-    std::vector<int> result = countBits(5);
+    std::vector<int> res = countBits(5);
 
-    for(int i : result) {
+    for(int i : res) {
         std::cout << i << std::endl;
     }
 

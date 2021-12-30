@@ -49,11 +49,6 @@ int sumNumbers(TreeNode* root) {
 }
 
 int main() {
-//    TreeNode* head = new TreeNode(1);
-//    head->left = new TreeNode(2);
-//    head->right = new TreeNode(3);
-//
-
     TreeNode* head = new TreeNode(4);
     head->left = new TreeNode(9);
     head->right = new TreeNode(0);

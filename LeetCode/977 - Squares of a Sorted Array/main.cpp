@@ -57,9 +57,9 @@ std::vector<int> sortedSquares(std::vector<int>& nums) {
 
 int main() {
 	std::vector<int> input = { -2, -1, 3 };
-	auto result = sortedSquares(input);
+	auto res = sortedSquares(input);
 
-	for (int i : result) {
+	for (int i : res) {
 		std::cout << i << " ";
 	}
 

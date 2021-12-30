@@ -22,9 +22,9 @@ std::vector<int> productExceptSelf(std::vector<int>& nums) {
 
 int main() {
     std::vector<int> input = { -1, 1, 0, -3, 3 };
-    std::vector<int> result = productExceptSelf(input);
+    std::vector<int> res = productExceptSelf(input);
 
-    for(int i : result) {
+    for(int i : res) {
         std::cout << i << " " << std::endl;
     }
 

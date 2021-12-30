@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "../shared/utils.h"
 #include "../shared/listnode.h"
 
 ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
@@ -47,10 +48,7 @@ int main() {
 
     ListNode* res = mergeTwoLists(l1, l2);
 
-    while(res != nullptr) {
-        std::cout << res->val << std::endl;
-        res = res->next;
-    }
+    utils::print_linked_list(res);
 
     return 0;
 }
