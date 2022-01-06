@@ -3,21 +3,13 @@ public:
     int maxSubArray(vector<int>& nums) {
         int best = INT32_MIN;
         
-        int ptr = 0;
-        int local_best = 0;
-        
-        while(ptr < nums.size()) {
-            local_best += nums[ptr];
-
-            if(local_best > best) {
-                best = local_best;
+        int total = 0;
+        for(int i : nums) {
+            total += i;
+            best = max(total, best);
+            if(total < 0) {
+                total = 0;
             }
-
-            if(local_best < 0) {
-                local_best = 0;
-            }
-            
-            ptr++;
         }
         
         return best;
