@@ -1,27 +1,32 @@
 class Solution {
 public:
     bool isValid(string s) {
-        std::stack<char> stack;
+        std::stack<int> p_stack;
+        std::unordered_map<char, char> p_pairs = {
+            {'(', ')'},
+            {'[', ']'},
+            {'{', '}'}
+        };
+        
         for(char c : s) {
-            // Push any opening parenthesis onto the stack
-            if(c == '(' || c == '{' || c == '[') {
-                stack.push(c);
+            if(p_pairs.count(c)) {
+                // It's an opening parenthesis
+                p_stack.push(c);
             }
             else {
-                // Check if we can pop - if not, we have too many closing parenthesis and thus s is invalid
-                if(!stack.empty()) {
-                    char prev = stack.top();
-                    stack.pop();
-                    // Check if the parenthesis match - if not, s is invalid
-                    if((c == ')' && prev != '(') || (c == '}' && prev != '{') || (c == ']' && prev != '[')) {
-                        return false;
-                    }
+                if(p_stack.size() == 0) {
+                    return false;
+                }
+                
+                if(p_pairs.count(p_stack.top()) && p_pairs[p_stack.top()] == c) {
+                    p_stack.pop();
                 }
                 else {
-                  return false;  
+                    return false;
                 }
             }
         }
-        return stack.empty();
+        
+        return p_stack.size() == 0;
     }
 };
