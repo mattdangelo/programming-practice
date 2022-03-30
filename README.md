@@ -1,7 +1,5 @@
 # Programming Practice
 
-
-### All solutions in C++
 #### Build projects with CMake
 
 Advent of Code
