@@ -1,8 +1,8 @@
 # Programming Practice
 
 
-### All solutions written in C++
-#### Build project with CMake
+### All solutions in C++
+#### Build projects with CMake
 
 Advent of Code
 https://adventofcode.com/
