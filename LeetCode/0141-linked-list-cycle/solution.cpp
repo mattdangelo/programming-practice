@@ -9,18 +9,20 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        std::unordered_set<ListNode*> visited;
-
-        while(head != nullptr) {
-            if(visited.count(head)) {
-                return true;
+        ListNode* slow = head;
+        ListNode* fast = head;
+        
+        while(fast != nullptr) {
+            slow = slow->next;
+            fast = fast->next;
+            if(fast != nullptr) {
+                fast = fast->next;
+                if(slow == fast) {
+                    return true;
+                }
             }
-            else {
-                visited.insert(head);
-            }
-            head = head->next;
         }
-
+        
         return false;
     }
 };
