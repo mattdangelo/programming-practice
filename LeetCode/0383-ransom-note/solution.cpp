@@ -1,24 +1,24 @@
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
-        unordered_map<char, int> mag_count;
+        std::unordered_map<char, int> counts;
         for(char c : magazine) {
-            if(mag_count.find(c) == mag_count.end()) {
-                mag_count[c] = 1;
+            if(counts.count(c)) {
+                counts[c]++;
             }
             else {
-                mag_count[c] = mag_count[c] + 1;
+                counts[c] = 1;
             }
         }
         
         for(char c : ransomNote) {
-            if(mag_count.find(c) == mag_count.end()) {
+            if(!counts.count(c)) {
                 return false;
             }
             else {
-                mag_count[c] = mag_count[c] - 1;
-                if(mag_count[c] == 0) {
-                    mag_count.erase(c);
+                counts[c]--;
+                if(counts[c] == 0) {
+                    counts.erase(c);
                 }
             }
         }
