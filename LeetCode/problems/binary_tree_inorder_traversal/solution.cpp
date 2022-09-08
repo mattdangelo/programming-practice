@@ -15,7 +15,7 @@ public:
         if(!root) {
             return;
         }
-        
+
         recIn(root->left, current);
         current.push_back(root->val);
         recIn(root->right, current);
