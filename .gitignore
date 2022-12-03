@@ -33,7 +33,11 @@
 
 # CMake
 AdventOfCode/2020/cmake-build-debug
+
+# Intellij
 AdventOfCode/2020/.idea
+AdventOfCode/2022/.idea
+
 
 LeetCode/cmake-build-debug
 LeetCode/.idea
