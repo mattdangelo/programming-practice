@@ -1,7 +1,5 @@
 # Programming Practice
 
-#### Build projects with CMake
-
 Advent of Code
 https://adventofcode.com/
 

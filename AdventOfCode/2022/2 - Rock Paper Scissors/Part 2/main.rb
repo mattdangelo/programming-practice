@@ -11,11 +11,11 @@ MY_SHAPE = { 'A' => { 'X' => 'Z', 'Y' => 'X', 'Z' => 'Y' },
 def strategy_score(result)
   case(result)
   when 'X'
-    0
+    LOSE_POINTS
   when 'Y'
-    3
+    DRAW_POINTS
   when 'Z'
-    6
+    WIN_POINTS
   end
 end
 
