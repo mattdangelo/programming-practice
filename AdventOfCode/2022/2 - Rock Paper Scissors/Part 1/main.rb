@@ -19,4 +19,4 @@ def game_score(them, you)
   SHAPE_SCORE[you] + strategy_score(them, you)
 end
 
-pp File.readlines("2 - Rock Paper Scissors/values.txt").sum { |line| game_score(line[0], line[2]) }
+p File.readlines("2 - Rock Paper Scissors/values.txt").sum { |line| game_score(line[0], line[2]) }

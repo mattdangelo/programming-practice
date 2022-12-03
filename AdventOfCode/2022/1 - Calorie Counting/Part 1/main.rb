@@ -10,4 +10,4 @@ File.readlines("1 - Calorie Counting/values.txt").each do |line|
   end
 end
 
-pp [best, current].max
+p [best, current].max
