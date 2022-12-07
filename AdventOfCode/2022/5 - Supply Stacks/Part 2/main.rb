@@ -29,4 +29,4 @@ moves.each do |m|
   stacks[column_map[m[2]]] += stacks[column_map[m[1]]].pop(m[0].to_i)
 end
 
-pp stacks.sort.to_h.values.map(&:last).join('')
+p stacks.sort.to_h.values.map(&:last).join('')
