@@ -1,24 +1,30 @@
 class Solution {
 public:
-    bool checkInclusion(string s1, string s2) {
-        if (s1.length() > s2.length()) {
-            false;
+    bool checkInclusion(string p, string s) {
+        if (p.length() > s.length()) {
+            return false;
         }
 
         // Sliding window
-        int left = 0;
-        int right = s1.length();
-        sort(s1.begin(), s1.end());
+        std::vector<int> p_values(26, 0);
+        std::vector<int> win_values(26, 0);
 
-        while (right <= s2.length()) {
-            string s2_substr = s2.substr(left, s1.length());
-            sort(s2_substr.begin(), s2_substr.end());
-            if(s2_substr == s1) {
+        for(int i=0;i<p.length();i++) {
+            p_values[p[i] - 'a']++;
+            win_values[s[i] - 'a']++;
+        }
+
+        if(p_values == win_values) {
+            return true;
+        }
+
+        for(int left = p.length(); left < s.length(); left++){
+            win_values[s[left - p.length()] - 'a']--;
+            win_values[s[left] - 'a']++;
+
+            if(p_values == win_values) {
                 return true;
             }
-
-            left++;
-            right++;
         }
 
         return false;
