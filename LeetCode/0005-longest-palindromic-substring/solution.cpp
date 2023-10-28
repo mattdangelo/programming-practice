@@ -1,10 +1,10 @@
 class Solution {
 public:
     string longestPalindrome(string s) {
-        std::string best;
+        string best = s.substr(0, 1);
 
         for(int i=0;i<s.length();i++) {
-            // Try odd length palindromes here
+                        // Try odd length palindromes here
             int left = i;
             int right = i;
             while(s[left] == s[right]) {
