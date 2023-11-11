@@ -1,7 +1,7 @@
 # Programming Practice
 
 Advent of Code
-https://adventofcode.com/
+https://adventofcode.com
 
 LeetCode
-https://leetcode.com/Astradus/
+https://leetcode.com/mattdangelo
