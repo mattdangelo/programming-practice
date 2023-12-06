@@ -1,11 +1,11 @@
 def has_surrounding_symbol?(symbol_locations, line_index, start_index, end_index)
   return true if symbol_locations[line_index]&.include?(end_index + 1) || symbol_locations[line_index]&.include?(start_index - 1)
 
-  ((start_index - 1)..(end_index + 1)).step(1) do |i|
+  ((start_index - 1)..(end_index + 1)).each do |i|
     return true if symbol_locations[line_index - 1]&.include?(i)
   end
 
-  ((start_index - 1)..(end_index + 1)).step(1) do |i|
+  ((start_index - 1)..(end_index + 1)).each do |i|
     return true if symbol_locations[line_index + 1]&.include?(i)
   end
 
