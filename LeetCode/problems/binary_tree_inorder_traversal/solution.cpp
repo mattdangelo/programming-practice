@@ -10,21 +10,27 @@
  * };
  */
 class Solution {
+    vector<int> res;
+
 public:
-    void recIn(TreeNode* root, std::vector<int>& current) {
-        if(!root) {
-            return;
+    void recRecurse(TreeNode* root) {
+        if(root->left) {
+            recRecurse(root->left);
         }
 
-        recIn(root->left, current);
-        current.push_back(root->val);
-        recIn(root->right, current);
-        return;
+        res.push_back(root->val);
+
+        if(root->right) {
+            recRecurse(root->right);
+        }
     }
-    
+
     vector<int> inorderTraversal(TreeNode* root) {
-        std::vector<int> cur;
-        recIn(root, cur);
-        return cur;
+        if(root == nullptr) {
+            return res;
+        }
+
+        recRecurse(root);
+        return res;
     }
 };
