@@ -10,37 +10,24 @@
  * };
  */
 class Solution {
-    int max_diff = INT32_MIN;
+    int best_diff = 0;
 public:
-    std::vector<int> maxAnDFS(TreeNode* root) {
-        std::vector<int> left; 
-        if(root->left == nullptr) {
-            left = { root->val, root->val };
+    void recDFS(TreeNode* root, int small, int large) {
+        int local_max_diff = std::max(std::abs(root->val - small), std::abs(root->val - large));
+        if(local_max_diff > best_diff) {
+            best_diff = local_max_diff;
         }
-        else {
-            left = maxAnDFS(root->left);
-        }
-        
-        std::vector<int> right;
-        if(root->right == nullptr) {
-            right = { root->val, root->val };
-        }
-        else {
-            right = maxAnDFS(root->right);
-        }
-        
-        int min = std::min(left[0], right[0]);
-        int max = std::max(left[1], right[1]);
 
-        if(abs(min - root->val) > max_diff || abs(max - root->val) > max_diff) {
-            max_diff = std::max(abs(min - root->val), abs(max - root->val));
+        if(root->left) {
+            recDFS(root->left, std::min(small, root->val), std::max(large, root->val));
         }
-        
-        return {std::min(min, root->val), std::max(max, root->val)};
+
+        if(root->right) {
+            recDFS(root->right, std::min(small, root->val), std::max(large, root->val));
+        }
     }
-    
     int maxAncestorDiff(TreeNode* root) {
-        maxAnDFS(root);
-        return max_diff;
+        recDFS(root, root->val, root->val);
+        return best_diff;
     }
 };
