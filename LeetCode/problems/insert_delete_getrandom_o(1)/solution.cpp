@@ -1,39 +1,40 @@
 class RandomizedSet {
-public:
+    std::unordered_map<int, int> index_map;
     std::vector<int> values;
-    std::unordered_map<int, int> index;
-
-    RandomizedSet() { }
-
+public:
+    RandomizedSet() {
+        
+    }
+    
     bool insert(int val) {
-        if(index.count(val)) {
-            // Already had element in here
-            return false;
-        }
-        else {
+        if(!index_map.count(val)) {
             values.push_back(val);
-            index[val] = values.size() - 1;
+            index_map[val] = values.size() - 1;
             return true;
         }
-    }
 
+        return false;
+    }
+    
     bool remove(int val) {
-        if(index.count(val)) {
-            int index_of_val = index[val];
+        if(index_map.count(val)) {
+            int index_of_val = index_map[val];
 
             // Put the element from the end of the values list in its place
             values[index_of_val] = values[values.size() - 1];
             values.pop_back();
 
-            index[values[index_of_val]] = index_of_val;
-            index.erase(val);
+            index_map[values[index_of_val]] = index_of_val;
+            index_map.erase(val);
+
             return true;
         }
+
         return false;
     }
-
+    
     int getRandom() {
-        return values.at(rand() % values.size());
+        return values[rand() % values.size()];
     }
 };
 
