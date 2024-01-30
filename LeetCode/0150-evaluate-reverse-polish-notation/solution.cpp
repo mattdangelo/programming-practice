@@ -1,6 +1,8 @@
 class Solution {
 private:
-    std::pair<int, int> getOperands(std::stack<int>& memory) {
+    std::stack<int> memory;
+
+    std::pair<int, int> popOperands() {
         std::pair<int, int> values;
         values.first = memory.top();
         memory.pop();
@@ -8,32 +10,32 @@ private:
         memory.pop();
         return values;
     }
+
 public:
     int evalRPN(vector<string>& tokens) {
-        std::stack<int> memory;
-        
         for(std::string s : tokens) {
             if(s == "+") {
-                auto operands = getOperands(memory);
+                auto operands = popOperands();
                 memory.push(operands.second + operands.first);
             }
             else if(s == "-") {
-                auto operands = getOperands(memory);
+                auto operands = popOperands();
                 memory.push(operands.second - operands.first);
             }
             else if(s == "*") {
-                auto operands = getOperands(memory);
+                auto operands = popOperands();
                 memory.push(operands.second * operands.first);
             }
             else if(s == "/") {
-                auto operands = getOperands(memory);
+                auto operands = popOperands();
                 memory.push(operands.second / operands.first);
             }
             else {
+                // Just a number, push it onto the stack
                 memory.push(stoi(s));
             }
         }
-        
+
         return memory.top();
     }
 };
