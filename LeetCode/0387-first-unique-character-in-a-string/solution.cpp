@@ -1,22 +1,21 @@
+#define ASCII_OFFSET 97
+
 class Solution {
+    int counts[26];
 public:
     int firstUniqChar(string s) {
-        unordered_map<char, int> count;
+        // First pass, get the counts of all characters in the string s
         for(char c : s) {
-            if(count.find(c) == count.end()) {
-                count[c] = 1;
-            }
-            else {
-                count[c] = count[c] + 1;
-            }
+            counts[c - ASCII_OFFSET]++;
         }
-        
+
+        // Second pass, find the first char with a count of 1 and return the index
         for(int i=0;i<s.length();i++) {
-            if(count[s[i]] == 1) {
+            if(counts[s[i] - ASCII_OFFSET] == 1) {
                 return i;
             }
         }
-        
+
         return -1;
     }
 };
