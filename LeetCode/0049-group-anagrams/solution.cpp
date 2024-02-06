@@ -14,7 +14,7 @@ public:
                 groups[sorted] = value;
             }
         }
-        
+
         std::vector<std::vector<std::string>> results;
         results.reserve(groups.size());
         for(auto &kv : groups) {
