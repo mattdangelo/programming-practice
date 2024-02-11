@@ -1,46 +1,38 @@
 class Solution {
-struct counter_value {
-    int count;
-    char value;
-
-public:
-    counter_value(char value) {
-        this->value = value;
-        this->count = 1;
-    }
-
-    bool operator<(const counter_value& y) const
-    {
-        return(this->count < y.count);
-    }
-
-};
-
+    std::unordered_map<char, int> count_map;
 public:
     string frequencySort(string s) {
-        std::unordered_map<char, int> index;
-        std::vector<counter_value> counts;
-
+        // Step 1: Count occurrences in a map
         for(char c : s) {
-            if(index.count(c)) {
-                counts[index[c]].count = counts[index[c]].count + 1;
+            if(count_map.count(c)) {
+                count_map[c]++;
             }
             else {
-                counts.emplace_back(counter_value(c));
-                index[c] = counts.size() - 1;
+                count_map[c] = 1;
             }
         }
 
-        std::sort(counts.rbegin(), counts.rend());
+        // Step 2: Copy occurrences to a vector and sort by count
+        std::vector<std::pair<char, int>> count_array;
+        count_array.reserve(count_map.size());
+        for(std::pair<char, int> p : count_map) {
+            count_array.push_back(p);
+        }
 
-        std::string result = "";
+        std::sort(count_array.begin(), count_array.end(), [](const std::pair<char, int>& lhs, const std::pair<char, int>& rhs) {
+            return lhs.second > rhs.second;
+        });
 
-        for(counter_value c : counts) {
-            for(int i=0;i<c.count;i++) {
-                result += c.value;
+        // Step 3: Reconstruct string
+        std::string ret;
+        ret.resize(s.length());
+        int ptr = 0;
+        for(std::pair<char, int> p : count_array) {
+            for(int i=0;i<p.second;i++) {
+                ret[ptr++] = p.first;
             }
         }
 
-        return result;
+        return ret;
     }
 };
