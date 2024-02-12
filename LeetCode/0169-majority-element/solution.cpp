@@ -1,22 +1,21 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        int maj_threshold = nums.size() / 2;
         std::unordered_map<int, int> counts;
-        for(int n : nums) {
-            if(counts.count(n) == 0) {
-                counts[n] = 1;
+        int thresh = nums.size() / 2;
+        for(int i : nums) {
+            if(counts.count(i)) {
+                counts[i]++;
             }
             else {
-                counts[n]++;
+                counts[i] = 1;
             }
 
-            if(counts[n] > maj_threshold) {
-                return n;
+            if(counts[i] > thresh) {
+                return i;
             }
         }
 
-        // Should never happen
         return -1;
     }
 };
