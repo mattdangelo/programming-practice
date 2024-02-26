@@ -10,65 +10,44 @@
  * };
  */
 class Solution {
-public:
-    bool isSameTree(TreeNode* p, TreeNode* q) {
-        if((p == nullptr) != (q == nullptr)) {
-            return false;
-        }
-
-       if(p == nullptr && q == nullptr) {
-            return true;
-        }
-        
+    bool recIsSameTree(TreeNode* p, TreeNode* q) {
         if(p->val != q->val) {
             return false;
-        }
+        } 
 
-        if(p->left == nullptr && p->right == nullptr) {
-            if(q->left == nullptr && q->right == nullptr) {
-                return true;
-            }
-            else {
-                return false;
-            }
+        bool left_path_same;
+        if(p->left && q->left) {
+            left_path_same = recIsSameTree(p->left, q->left);
         }
-
-        bool left_true;
-        if(p->left != nullptr) {
-            if(q->left != nullptr) {
-                left_true = isSameTree(p->left, q->left);
-            }
-            else {
-                left_true = false;
-            }
+        else if(p->left == nullptr && q->left == nullptr) {
+            left_path_same = true;
         }
         else {
-            if(q->left != nullptr) {
-                left_true = false;
-            }
-            else {
-                left_true = true;
-            }
+            return false;
         }
 
-        bool right_true;
-        if(p->right != nullptr) {
-            if(q->right != nullptr) {
-                right_true = isSameTree(p->right, q->right);
-            }
-            else {
-                right_true = false;
-            }
+        bool right_path_same;
+        if(p->right && q->right) {
+            right_path_same = recIsSameTree(p->right, q->right);
+        }
+        else if(p->right == nullptr && q->right == nullptr) {
+            right_path_same = true;
         }
         else {
-            if(q->right != nullptr) {
-                right_true = false;
-            }
-            else {
-                right_true = true;
-            }
+            return false;
         }
 
-        return left_true && right_true;
+        return left_path_same && right_path_same;
+    }
+public:
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        if(p == nullptr && q == nullptr) {
+            return true;
+        }
+        else if(p == nullptr || q == nullptr) {
+            return false;
+        }
+
+        return recIsSameTree(p, q);
     }
 };
