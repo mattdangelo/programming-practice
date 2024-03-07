@@ -13,18 +13,16 @@ public:
     ListNode* middleNode(ListNode* head) {
         ListNode* slow = head;
         ListNode* fast = head;
-        
+
         while(fast != nullptr) {
             fast = fast->next;
             if(fast == nullptr) {
                 break;
             }
-            else {
-                fast = fast->next;
-            }
+            fast = fast->next;
             slow = slow->next;
         }
-        
+
         return slow;
     }
 };
