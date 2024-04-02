@@ -1,23 +1,26 @@
 class Solution {
-    std::unordered_map<int, int> memo;
+    vector<int> nums;
+    vector<int> cache;
 public:
-    int rob(vector<int>& nums, int index) {
-        if(index >= nums.size()) {
-            return 0;
+    int recRob(int current_idx, int current_cost) {
+        // Base case
+        if(current_idx >= nums.size()) {
+            return current_cost;
         }
         
-        if(memo.count(index + 1) == 0) {
-            memo[index + 1] = rob(nums, index + 1);
+        if (cache[current_idx] != -1) {
+            return cache[current_idx];
         }
-        
-        if(memo.count(index + 2) == 0) {
-            memo[index + 2] = rob(nums, index + 2);
-        }
-        
-        return max(memo[index + 1], memo[index + 2] + nums[index]);
+
+        int ans = std::max(recRob(current_idx + 1, current_cost), recRob(current_idx + 2, current_cost) + nums[current_idx]);
+        cache[current_idx] = ans;
+        return ans;
     }
-    
+
     int rob(vector<int>& nums) {
-        return rob(nums, 0);
+        this->nums = nums;
+        cache = std::vector<int>(nums.size() + 1, -1);
+
+        return recRob(0, 0);
     }
 };
