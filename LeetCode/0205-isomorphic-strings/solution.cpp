@@ -1,26 +1,31 @@
 class Solution {
 public:
     bool isIsomorphic(string s, string t) {
-        std::unordered_set<char> used;
-        std::unordered_map<char, char> charmap;
-        
+        // Early exist - strings not the same size
+        if(s.length() != t.length()) {
+            return false;
+        }
+
+        std::unordered_map<char, char> s_mapping;
+        std::unordered_map<char, char> t_mapping;
+
         for(int i=0;i<s.length();i++) {
-            if(charmap.count(s[i]) == 0) {
-                if(used.count(t[i]) == 0) {
-                    charmap[s[i]] = t[i];
-                    used.insert(t[i]);
+            if(s_mapping.count(s[i])) {
+                if(s_mapping[s[i]] != t[i]) {
+                    return false;
                 }
-                else {
+            }
+            else if(t_mapping.count(t[i])) {
+                if(t_mapping[t[i]] != s[i]) {
                     return false;
                 }
             }
             else {
-                if(charmap[s[i]] != t[i]) {
-                    return false;
-                }
+                s_mapping[s[i]] = t[i];
+                t_mapping[t[i]] = s[i];
             }
         }
-        
+
         return true;
     }
 };
