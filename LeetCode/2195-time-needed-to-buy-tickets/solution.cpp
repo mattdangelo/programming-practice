@@ -5,7 +5,6 @@ public:
         while(tickets[k] > 0) {
             // Go through everyone in the list
             for(int i=0;i<tickets.size();i++) {
-                // If they still have tickets to buy
                 if(tickets[i] > 0) {
                     // Buy them
                     tickets[i]--;
