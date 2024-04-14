@@ -10,26 +10,31 @@
  * };
  */
 class Solution {
-public:
-    
-    int DFS(TreeNode* root, bool came_from_left) {
-        if(root->left == nullptr && root->right == nullptr) {
-            return came_from_left ? root->val : 0;
+    int count;
+
+    void recSumOfLeftLeaves(TreeNode* root, bool came_from_left) {
+        if(!root->left && !root->right) {
+            // Check left leaf status
+            if(came_from_left) {
+                count += root->val;
+            }
+        }
+        
+        if(root->left) {
+            // Go left
+            recSumOfLeftLeaves(root->left, true);
         }
 
-        int ret = 0;
-        if(root->left != nullptr) {
-            ret += DFS(root->left, true);
+        if(root->right) {
+            // Go right
+            recSumOfLeftLeaves(root->right, false);
         }
-
-        if(root->right != nullptr) {
-            ret += DFS(root->right, false);
-        }
-
-        return ret;
     }
-    
+
+public:
     int sumOfLeftLeaves(TreeNode* root) {
-        return DFS(root, false);
+        count = 0;
+        recSumOfLeftLeaves(root, false);
+        return count;
     }
 };
