@@ -10,44 +10,36 @@
  * };
  */
 class Solution {
+    int total = 0;
+    std::vector<int> stack;
+ 
+    void recSumNumbers(TreeNode* root) {
+        stack.push_back(root->val);
+        if(root->left) {
+            recSumNumbers(root->left);
+        }
+
+        if(root->right) {
+            recSumNumbers(root->right);
+        }
+
+        if(!root->left && !root->right) {
+            int local_total = 0;
+            unsigned int multi = 1;
+            for(int i=stack.size() - 1;i>=0;i--) {
+                local_total += multi * stack[i];
+                multi *= 10;
+            }
+            total += local_total;
+        }
+
+        stack.pop_back();
+    }
 public:
     int sumNumbers(TreeNode* root) {
-        if(root == nullptr) {
-            return 0;
-        }
-
-        int total = 0;
-
-        std::stack<TreeNode*> dfs_stack;
-        dfs_stack.push(root);
-        std::unordered_map<TreeNode*, TreeNode*> call_tree;
-
-        while(!dfs_stack.empty()) {
-            TreeNode* ptr = dfs_stack.top();
-
-            if(ptr->left == nullptr && ptr->right == nullptr) {
-                std::string str_val;
-                auto call_tree_ptr = ptr;
-                while(call_tree_ptr != nullptr) {
-                    str_val += std::to_string(call_tree_ptr->val);
-                    call_tree_ptr = call_tree[call_tree_ptr];
-                }
-                std::reverse(str_val.begin(), str_val.end());
-                total += stoi(str_val);
-            }
-
-            dfs_stack.pop();
-
-            if(ptr->right != nullptr) {
-                call_tree[ptr->right] = ptr;
-                dfs_stack.push(ptr->right);
-            }
-
-            if(ptr->left != nullptr) {
-                call_tree[ptr->left] = ptr;
-                dfs_stack.push(ptr->left);
-            }
-        }
+        // The depth of the tree will not exceed 10
+        stack.reserve(10);
+        recSumNumbers(root);
 
         return total;
     }
