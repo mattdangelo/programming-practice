@@ -1,19 +1,29 @@
 class Solution {
-    std::vector<std::vector<int>> ss;
-public:
-    void recPopulateSubsets(std::vector<int>& nums, std::vector<int> current, int index) {
-        if(index == nums.size()) {
-            ss.push_back(current);
+    std::set<std::vector<int>> results;
+    std::vector<int> working_vector;
+    void recSubsets(std::vector<int>& nums, std::vector<int>& working_vector, int idx) {
+        if(idx == nums.size()) {
+            results.insert(working_vector);
+            return;
         }
-        else {
-            recPopulateSubsets(nums, current, index + 1);
-            current.push_back(nums[index]);
-            recPopulateSubsets(nums, current, index + 1);
-        }
+
+        // Take the element
+        working_vector.push_back(nums[idx]);
+        recSubsets(nums, working_vector, idx + 1);
+        
+        // Don't take the element
+        working_vector.pop_back();
+        recSubsets(nums, working_vector, idx + 1);
     }
-    
+public:
     vector<vector<int>> subsets(vector<int>& nums) {
-        recPopulateSubsets(nums, std::vector<int>(), 0);
-        return ss;
+        working_vector.reserve(nums.size());
+        recSubsets(nums, working_vector, 0);
+
+        std::vector<std::vector<int>> ret;
+        ret.reserve(results.size());
+        ret.assign(results.begin(), results.end());
+
+        return ret;
     }
 };
