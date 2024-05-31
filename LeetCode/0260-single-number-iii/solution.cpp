@@ -1,31 +1,33 @@
 class Solution {
 public:
     vector<int> singleNumber(vector<int>& nums) {
-        long xor_res = 0;
-
+        int total_xor = 0;
         for(int i : nums) {
-            xor_res ^= i;
+            total_xor ^= i;
         }
 
-        // At this point, we have a ^ b in xor_res
-        // We know that if a ^ b has a 1 in bit i, the values between the two were different.
+        // Find a bit that's a 1 in the total xor
+        // that's a difference between the two numbers we're looking for
+        int first_diff = 0;
+        for(;first_diff<32;first_diff++) {
+            if((total_xor >> first_diff) & 1) {
+                break;
+            }
+        }
 
-        xor_res &= -xor_res;
-
-        int bit_set_res = 0;
-        int bit_not_set_res = 0;
-
+        // Create 2 groups and xor them together. One group will have a 1 in position first_diff, the other
+        // will have a 0
+        int group_one_xor = 0;
+        int group_zero_xor = 0;
         for(int i : nums) {
-            if(i & xor_res) {
-                // Bit is set
-                bit_set_res ^= i;
+            if((i >> first_diff) & 1) {
+                group_one_xor ^= i;
             }
             else {
-                // Not set
-                bit_not_set_res ^= i;
+                group_zero_xor ^= i;
             }
         }
 
-        return { bit_set_res, bit_not_set_res };
+        return { group_one_xor, group_zero_xor };
     }
 };
