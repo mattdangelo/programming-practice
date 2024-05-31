@@ -1,11 +1,11 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        int res = 0;
+        int test = 0;
         for(int i : nums) {
-            res ^= i;
+            test ^= i;
         }
-        
-        return res;
+
+        return test;
     }
 };
