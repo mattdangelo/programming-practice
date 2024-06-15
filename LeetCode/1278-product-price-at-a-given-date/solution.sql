@@ -3,9 +3,9 @@ WITH latest_prices AS (
  SELECT p1.product_id, new_price AS price
     FROM Products p1
     JOIN (SELECT product_id, MAX(change_date) AS latest_date
-            FROM Products
-            WHERE change_date <= '2019-08-16'
-            GROUP BY product_id) p2
+          FROM Products
+          WHERE change_date <= '2019-08-16'
+          GROUP BY product_id) p2
     ON p1.product_id = p2.product_id AND p1.change_date = p2.latest_date),
 -- Get a default price for each distinct product, in case it didn't have a price change on
 -- or before the cutoff date
