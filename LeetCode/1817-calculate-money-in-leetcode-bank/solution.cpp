@@ -1,15 +1,19 @@
 class Solution {
 public:
     int totalMoney(int n) {
-        int count = -1;
-        int sum = 0;
-        for(int i=0;i<n;i++) {
-            if(i%7==0) {
-                count++;
+        int total = 0;
+        int week = 0;
+        int day_of_week = 0;
+
+        while(n > 0) {
+            total += day_of_week + 1 + week;
+            n--;
+            day_of_week = (day_of_week + 1) % 7;
+            if(day_of_week == 0) {
+                week++;
             }
-            sum += (i%7+1)+count;
         }
 
-        return sum;
+        return total;
     }
 };
